@@ -10,6 +10,7 @@ namespace Demo.Tests
     public class ExecptionsAssertionsTests
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Calculadora_Dividir_DeveRetornarErroDivisaoPorZero()
         {
             // arranje
@@ -20,6 +21,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Salario_DeveRetornarErroSalarioInferiorPermitido()
         {
             // Arranje & Act & Assert

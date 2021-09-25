@@ -9,6 +9,7 @@ namespace Demo.Tests
 {
     public class RangeAssertionsTests
     {
+        [Trait("Categoria", "Asserts")]
         [Theory]
         [InlineData(700)]
         [InlineData(1500)]

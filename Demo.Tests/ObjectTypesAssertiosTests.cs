@@ -5,6 +5,7 @@ namespace Demo.Tests
     public class ObjectTypesAssertiosTests
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void FuncionarioFactory_Criar_DeveRetornarTipoFuncionario()
         {
             // arranje && act
@@ -15,6 +16,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void FuncionarioFactory_Criar_DeveRetornarTipoDerivadoPessoa()
         {
             // arranje && act

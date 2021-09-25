@@ -5,6 +5,7 @@ namespace Demo.Tests
     public class NumberAssertionsTests
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Calculadora_Somar_DeveSerIgual()
         {
             // arranje
@@ -18,6 +19,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Calculadora_Somar_NaoDeveSerIgual()
         {
             // arranje

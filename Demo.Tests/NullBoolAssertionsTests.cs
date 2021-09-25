@@ -5,6 +5,7 @@ namespace Demo.Tests
     public class NullBoolAssertionsTests
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Nome_NaoDeveSerNuloOuVazio()
         {
             // arranje && act
@@ -15,6 +16,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Apelido_NaoDeveTerApelido()
         {
             // arranje && act

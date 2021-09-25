@@ -10,6 +10,7 @@ namespace Demo.Tests
     public  class StringAssertionsTest
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_RetornarNomeCompleto()
         {
             //Arranje
@@ -23,6 +24,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_DeveIgnorarCase()
         {
             //Arranje
@@ -36,6 +38,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_DeveConterTrecho()
         {
             //Arranje
@@ -49,6 +52,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_DeveComecarCom()
         {
             //Arranje
@@ -62,6 +66,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_DeveAcabarCom()
         {
             //Arranje
@@ -75,6 +80,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void StringTools_UnirNomes_ValidarExpressaoRegular()
         {
             //Arranje

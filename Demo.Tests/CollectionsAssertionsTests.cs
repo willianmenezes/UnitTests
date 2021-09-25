@@ -10,6 +10,7 @@ namespace Demo.Tests
     public class CollectionsAssertionsTests
     {
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Habilidades_NaoDevePosssuirHabilidadesVazias()
         {
             // arranje && act
@@ -20,6 +21,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Habilidades_JuniorDevePossuirHabilidadesBasicas()
         {
             // arranje && act
@@ -30,6 +32,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Habilidades_JuniorNaoDevePossuirHabilidadesAvancadas()
         {
             // arranje && act
@@ -40,6 +43,7 @@ namespace Demo.Tests
         }
 
         [Fact]
+        [Trait("Categoria", "Asserts")]
         public void Funcionario_Habilidades_SeniorDevePossuirTodasHabilidades()
         {
             // arranje && act
