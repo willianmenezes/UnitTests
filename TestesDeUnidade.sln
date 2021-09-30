@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Tests", "Demo.Tests\Demo.Tests.csproj", "{2AAC17E0-4970-4485-B4F5-F00F0AE8F07C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traits", "Traits\Traits.csproj", "{70C5707E-55A5-4B94-A6A0-5179952B425A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traits", "Traits\Traits.csproj", "{70C5707E-55A5-4B94-A6A0-5179952B425A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traits.Tests", "Traits.Tests\Traits.Tests.csproj", "{86C02A74-987D-44EA-B636-0E7CF1F9C589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Traits.Tests", "Traits.Tests\Traits.Tests.csproj", "{86C02A74-987D-44EA-B636-0E7CF1F9C589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock.Tests", "Mock.Tests\Mock.Tests.csproj", "{43F8D993-A3DA-4721-99C6-B1EE871456D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{86C02A74-987D-44EA-B636-0E7CF1F9C589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C02A74-987D-44EA-B636-0E7CF1F9C589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C02A74-987D-44EA-B636-0E7CF1F9C589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F8D993-A3DA-4721-99C6-B1EE871456D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F8D993-A3DA-4721-99C6-B1EE871456D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F8D993-A3DA-4721-99C6-B1EE871456D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F8D993-A3DA-4721-99C6-B1EE871456D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
