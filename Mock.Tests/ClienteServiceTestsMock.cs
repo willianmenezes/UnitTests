@@ -1,16 +1,18 @@
 using Features.Clientes;
 using MediatR;
+using Mock.Tests.Fixture;
 using Moq;
-using Traits.Tests.Fixture;
+using System.Threading;
 using Xunit;
 
 namespace Mock.Tests
 {
-    [Collection(nameof(ClienteCollectionBogus))]
-    public class ClienteServiceTests
+    [Collection(nameof(ClienteCollectionBogusMoq))]
+    public class ClienteServiceTestsMock
     {
-        private readonly ClienteTestsFixtureBogus _fixture;
-        public ClienteServiceTests(ClienteTestsFixtureBogus fixture)
+        readonly ClienteTestsFixtureBogusMoq _fixture;
+
+        public ClienteServiceTestsMock(ClienteTestsFixtureBogusMoq fixture)
         {
             _fixture = fixture;
         }
@@ -25,6 +27,13 @@ namespace Mock.Tests
             var mediator = new Mock<IMediator>();
 
             var clienteService = new ClienteService(clienteRepository.Object, mediator.Object);
+
+            // act
+            clienteService.Adicionar(cliente);
+
+            // assert
+            clienteRepository.Verify(r => r.Adicionar(cliente), times: Times.Once);
+            mediator.Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), times: Times.Once);
         }
     }
 }
