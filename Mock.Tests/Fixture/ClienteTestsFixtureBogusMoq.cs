@@ -2,6 +2,8 @@
 using Bogus.DataSets;
 using Features.Clientes;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Mock.Tests.Fixture
@@ -14,18 +16,35 @@ namespace Mock.Tests.Fixture
 
         public Cliente GerarClienteValido()
         {
+            return GerarClientes(1, true).First();
+        }
+
+        public IEnumerable<Cliente> GerarClientesVariados()
+        {
+            var clientes = new List<Cliente>();
+
+            clientes.AddRange(GerarClientes(50, true));
+            clientes.AddRange(GerarClientes(50, false));
+
+            return clientes;
+        }
+
+        public IEnumerable<Cliente> GerarClientes(int quantidade, bool ativo)
+        {
             var genero = new Faker().PickRandom<Name.Gender>();
 
-            return new Faker<Cliente>("pt_BR")
+            var cliente = new Faker<Cliente>("pt_BR")
                 .CustomInstantiator(f => new Cliente(
                     Guid.NewGuid(),
                     f.Name.FindName(gender: genero),
                     f.Name.LastName(gender: genero),
                     f.Date.Past(80, DateTime.Now.AddYears(-18)),
                     "",
-                    true,
+                    ativo,
                     DateTime.Now))
                 .RuleFor(c => c.Email, (f, c) => f.Internet.Email(c.Nome.ToLower(), c.Sobrenome.ToLower()));
+
+            return cliente.Generate(quantidade);
         }
 
         public Cliente GerarClienteInvalido()
