@@ -1,6 +1,7 @@
 ﻿using Bogus;
 using Bogus.DataSets;
 using Features.Clientes;
+using Moq.AutoMock;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Mock.Tests.Fixture
 
     public class ClienteTestsFixtureBogusMoq : IDisposable
     {
+        public AutoMocker Mocker {  get; set; }
 
         public Cliente GerarClienteValido()
         {
@@ -60,6 +62,13 @@ namespace Mock.Tests.Fixture
                     "",
                     false,
                     DateTime.Now));
+        }
+
+        public ClienteService ObterClienteService()
+        {
+            Mocker = new AutoMocker();
+            var clienteService = Mocker.CreateInstance<ClienteService>();
+            return clienteService;
         }
 
         public void Dispose()
